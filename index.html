@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Nested Todos App</title>
+        <link rel="stylesheet" href="app.css">
+    </head>
+
+    <body>
+        <main>
+            <div id="todos_main">
+                <h1>Nested Todos App</h1>
+                <div id="todos_input_container">
+                    <input type="text" id="todos_input" placeholder="What needs to be done?" autofocus>
+                    <button id="todos_add_btn">Add</button>
+                </div>
+            </div>
+
+            <div id="todos_list">
+            </div>
+        </main>
+
+        <footer>
+            <div id="manual">
+                <h1>Let's see how to use it...</h1>
+                <ul>
+                    <li><span>Add todo:</span> (1) type the task into the text box. (2) click the 'Add' button or press the 'Enter' key.</li>
+                    <li><span>Delete todo:</span> click the 'x' button.</li>
+                    <li><span>Add sub todo:</span> (1) click the '+' button. (2) type the task into the pop up text box. (3) click the 'Save' button or press the 'Enter' key.</li>
+                    <li><span>Edit an existing todo:</span> (1) double click the task name. (2) change the content. (3) click the 'Save' button or press the 'Enter' key.</li>
+                    <li><span>Mark todo as complete:</span> click the square box in front of the todo.</li>
+                </ul>
+            </div>
+            <div id="about">
+                <p>This is an execise created by <a href="https://github.com/jasontwuk" target="_blank">Jason Liao</a> for the <a href="https://watchandcode.com/" target="_blank">Watch and Code</a> premium course</p>
+            </div>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,309 @@
+/* general -------------------------------------------------*/
+html{
+    height: 100%;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d2e6fe+0,ffffff+100 */
+    background: #d2e6fe; /* Old browsers */
+    background: -moz-linear-gradient(top, #d2e6fe 0%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #d2e6fe 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #d2e6fe 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2e6fe', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+body {
+    width: 1024px;
+    margin: 0 auto;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+main {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: white;
+    min-height: 500px;
+    box-shadow: 0 0 5px #777;
+}
+footer{
+    padding: 0 20px;
+}
+input[type="text"] {
+    font-size: 18px;
+    padding: 5px;
+    display: inline-block;
+    width: 250px;
+    margin-right: 10px;
+}
+input[type="checkbox"] {
+    padding: 5px;
+    margin: 10px;
+}
+
+/* todos_main -------------------------------------------------------------*/
+#todos_main h1 {
+    text-align: center;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    color: rgb(85, 85, 85);
+    font-size: 35px;
+    font-weight: normal;
+}
+
+/* todos_input_container -------------------------------------------------------------*/
+#todos_input_container {
+    padding: 15px 0;
+    border-top: 1px dashed rgb(199, 199, 199);
+    border-bottom: 1px dashed rgb(199, 199, 199);
+}
+#todos_input_container p {
+    margin: 5px 0 0 5px;
+    color: red;
+    font-size: 14px;
+}
+#todos_input_container button {
+    font-size: 18px;
+    padding: 4px 40px;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0084ff+0,000080+100 */
+    background: rgb(0,0,128); /* Old browsers */
+    background: -moz-linear-gradient(top, rgb(0,132,255) 0%, rgb(0,0,128) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgb(0,132,255) 0%,rgb(0,0,128) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgb(0,132,255) 0%,rgb(0,0,128) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0084ff', endColorstr='#000080',GradientType=0 ); /* IE6-9 */
+}
+#todos_input_container button:hover {
+    background: rgb(0, 132, 255);
+    border: 2px solid navy;
+}
+
+/* todos_list ---------------------------------------------------------------*/
+#todos_list {
+    margin: 15px 0 0 -10px;
+}
+#todos_list ul {
+    margin: 10px 0; 
+    padding: 0;
+}
+#todos_list ul li {
+    margin: 0 0 10px 30px;
+    list-style-type: none;
+    font-size: 18px;
+}
+#todos_list ul li p {
+    margin: 0 0 10px 35px;
+    color: red;
+    font-size: 14px;
+}
+.completed {
+    color: rgb(187, 187, 187);
+    text-decoration: line-through;
+}
+
+/* todos_checkbox_container -------------------------------------------------*/
+#todos_checkbox_container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 18px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+#todos_checkbox_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.todos_checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+#todos_checkbox_container:hover input ~ .todos_checkmark {
+    background-color: rgb(213, 223, 255);;
+}
+
+/* When the checkbox is checked, add a blue background */
+#todos_checkbox_container input:checked ~ .todos_checkmark {
+    background-color: rgb(117, 149, 255);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.todos_checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+#todos_checkbox_container input:checked ~ .todos_checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+#todos_checkbox_container .todos_checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* todos_delete_btn -------------------------------------------------------------*/
+/* todos_delete_sub_textbox_btn -------------------------------------------------------------*/
+#todos_delete_btn, #todos_delete_sub_textbox_btn {
+    padding: 4px 10px;
+    font-weight: normal;
+    border-radius: 50%;
+    font-size: 18px;
+    border: 2px solid white;
+    color: white;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#848484+1,8b0000+100 */
+    background: rgb(132,132,132); /* Old browsers */
+    background: -moz-linear-gradient(top, rgb(132,132,132) 1%, rgb(139,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgb(132,132,132) 1%,rgb(139,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgb(132,132,132) 1%,rgb(139,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#848484', endColorstr='#8b0000',GradientType=0 ); /* IE6-9 */
+}
+#todos_delete_btn:hover, #todos_delete_sub_textbox_btn:hover {
+    background: red;
+    border: 2px solid darkred;
+}
+
+/* todos_add_sub_textbox_btn ----------------------------------------------------------*/
+#todos_add_sub_textbox_btn{
+    padding: 4px 9px;
+    font-size: 18px;
+    border-radius: 50%;
+    margin: 0 10px;
+    font-size: 18px;
+    border: 2px solid white;
+    color: white;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7f7f7f+0,000080+100 */
+    background: rgb(127,127,127); /* Old browsers */
+    background: -moz-linear-gradient(top, rgb(127,127,127) 0%, rgb(0,0,128) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgb(127,127,127) 0%,rgb(0,0,128) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgb(127,127,127) 0%,rgb(0,0,128) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f7f7f', endColorstr='#000080',GradientType=0 ); /* IE6-9 */
+}
+#todos_add_sub_textbox_btn:hover {
+    background: rgb(0, 132, 255);
+    border: 2px solid navy;
+}
+
+/* todos_subTextbox_div ---------------------------------------------------------------*/
+#todos_subTextbox_div {
+    margin: 5px 30px;
+}
+#todos_subTextbox_div p {
+    margin: 5px 0 5px 5px !important;
+}
+#todos_save_sub_btn {
+    margin: 0 10px 0 5px;
+    border: 2px solid white;
+    padding: 4px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    color: white;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#858585+0,464646+100 */
+    background: rgb(133,133,133); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgb(133,133,133) 0%, rgb(70,70,70) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgb(133,133,133) 0%,rgb(70,70,70) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgb(133,133,133) 0%,rgb(70,70,70) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#464646',GradientType=0 ); /* IE6-9 */
+}
+#todos_save_sub_btn:hover {
+    background: rgb(133, 133, 133);
+    border: 2px solid rgb(70, 70, 70);
+}
+
+/* todos_editTextbox_div ---------------------------------------------------------------*/
+#todos_editTextbox_div {
+    background: rgb(210, 230, 254);
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    box-shadow: 0 0 5px #777;
+}
+#todos_editTextbox_div p {
+    margin: 5px 0 0 55px !important;
+}
+
+#todos_save_edit_btn {
+    padding: 4px 10px;
+    margin: 0 0 0 5px;
+    border: 2px solid rgb(210, 230, 254);
+    font-size: 18px;
+    border-radius: 5px;
+    color: white;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#858585+0,464646+100 */
+    background: rgb(133,133,133); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgb(133,133,133) 0%, rgb(70,70,70) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgb(133,133,133) 0%,rgb(70,70,70) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgb(133,133,133) 0%,rgb(70,70,70) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#464646',GradientType=0 ); /* IE6-9 */
+
+}
+#todos_save_edit_btn:hover {
+    background: rgb(133, 133, 133);
+    border: 2px solid rgb(70, 70, 70);
+}
+
+/* manual ---------------------------------------------------------------*/
+#manual {
+    padding: 0 0 10px 0;
+    border-bottom: 1px dashed rgb(199, 199, 199);
+}
+#manual h1 {
+    font-size: 16px;
+    color: rgb(70, 70, 70);
+    font-weight: normal;
+}
+#manual ul {
+    margin: 0 0 0 10px;
+    padding: 0;
+    font-size: 14px;
+    color: rgb(133, 133, 133);
+}
+#manual ul li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+#manual ul li span {
+    display: inline-block;
+    color: white;
+    background: rgb(191, 191, 191);
+    border-radius: 3px;
+    padding: 1px 5px;
+}
+
+/* about ---------------------------------------------------------------*/
+#about {
+    color: rgb(133, 133, 133);
+    font-size: 12px;
+    text-align: center;
+}
+#about a {
+    color: navy;
+}
+#about a:hover {
+    color: rgb(0, 132, 255);
+}
